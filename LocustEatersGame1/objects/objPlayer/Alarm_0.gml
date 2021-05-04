@@ -1,2 +1,2 @@
-semiCanShoot = true
 fullCanShoot = true
+semiCanShoot = true

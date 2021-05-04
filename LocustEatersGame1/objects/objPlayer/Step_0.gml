@@ -9,7 +9,7 @@ if(onBlock){
 		vspeed = 0
 	}
 } else {
-	gravity = 0.75
+	gravity = playerGravity
 }
 
 if((instance_place(x,y+1,objBlockPhase) and keyboard_check_pressed(ord("S"))) or phasing){
@@ -23,19 +23,23 @@ if(phasing and !place_meeting(x,y,objBlock)){
 
 if(keyboard_check(ord("A"))){
 	hspeed = max(hspeed - acceleration, -topSpeed)
-	dirFacing = facing.left
-	image_xscale = -1
 } else if(keyboard_check(ord("D"))){
-	hspeed = min(hspeed + acceleration, topSpeed)	
-	dirFacing = facing.right
-	image_xscale = 1
+	hspeed = min(hspeed + acceleration, topSpeed)
 } else {
 	hspeed = hspeed - Polarity(hspeed)
 }
 
-if(place_meeting(x + hspeed, y + vspeed - 1, objBlock) && !phasing){
+if(mouse_x < x){
+	dirFacing = facing.left
+	image_xscale = -1
+} else {
+	dirFacing = facing.right
+	image_xscale = 1
+}	
+
+if(place_meeting(x + hspeed + (Polarity(hspeed) * 1), y + vspeed - 1 + (Polarity(vspeed)), objBlock) && !phasing){
 	hspeed = 0
-	if(onBlock or place_meeting(x + hspeed, y + vspeed - 1, objBlock)){ 
+	if(onBlock or place_meeting(x + hspeed + (Polarity(hspeed) * 1), y + vspeed - 1 + (Polarity(vspeed)), objBlock)){ 
 		/*
 			it's different the second time since we changed hspeed
 			essentially checking if we're on a block or still going to collide with one
@@ -43,4 +47,10 @@ if(place_meeting(x + hspeed, y + vspeed - 1, objBlock) && !phasing){
 		*/
 		vspeed = 0
 	}
+}
+
+if(hspeed == 0 or !onBlock){
+	sprite_index = sprPlayer
+} else {
+	sprite_index = sprPlayerWalking
 }

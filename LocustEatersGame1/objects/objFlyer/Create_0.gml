@@ -1,1 +1,0 @@
-path_start(flyPath, flySpeed, path_action_restart, true)

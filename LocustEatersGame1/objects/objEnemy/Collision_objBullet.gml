@@ -1,8 +1,7 @@
 instance_destroy(other)
 
-health -= bulletDamage * other.damageMultiplier
+enemyHealth -= bulletDamage * other.damageMultiplier
 
-if(health <= 0){
+if(enemyHealth <= 0){
 	instance_destroy()
-	instance_create_layer(x,y,"Instances",objExplosion)
 }

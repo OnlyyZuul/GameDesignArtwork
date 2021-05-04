@@ -1,0 +1,1 @@
+phy_angular_velocity = clamp(phy_angular_velocity, -maxAngVel, maxAngVel)

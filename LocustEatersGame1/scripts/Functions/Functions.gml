@@ -16,3 +16,14 @@ function RandPosNeg(){
 		return 1
 	}
 }
+
+function checkUserLife(){
+	if(health <= 0){
+		objGame.numLives -= 1
+		if(objGame.numLives <= 0){
+			game_restart()
+		}
+		score = max(score - 100,0)
+		room_restart()	
+	}
+}

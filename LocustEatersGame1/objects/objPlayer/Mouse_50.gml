@@ -1,5 +1,5 @@
 if((fireMode == fireModes.semi and semiCanShoot) or (fireMode != fireModes.semi and fullCanShoot)){
-	instance_create_layer(x + 20,y,"Instances",objBullet)
+	instance_create_layer(x + (20 * Polarity(image_xscale)),y,"Instances",objBullet)
 	semiCanShoot = false
 	fullCanShoot = false
 	

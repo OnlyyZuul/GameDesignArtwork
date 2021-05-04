@@ -1,0 +1,43 @@
+{
+  "spriteId": {
+    "name": "sprSpike",
+    "path": "sprites/sprSpike/sprSpike.yy",
+  },
+  "solid": true,
+  "visible": true,
+  "spriteMaskId": null,
+  "persistent": false,
+  "parentObjectId": {
+    "name": "objStaticParent",
+    "path": "objects/objStaticParent/objStaticParent.yy",
+  },
+  "physicsObject": true,
+  "physicsSensor": false,
+  "physicsShape": 2,
+  "physicsGroup": 1,
+  "physicsDensity": 0.0,
+  "physicsRestitution": 0.1,
+  "physicsLinearDamping": 0.1,
+  "physicsAngularDamping": 0.1,
+  "physicsFriction": 0.2,
+  "physicsStartAwake": true,
+  "physicsKinematic": false,
+  "physicsShapePoints": [
+    {"x":7.78999138,"y":-0.07142854,},
+    {"x":15.86142,"y":15.8571424,},
+    {"x":-0.06715107,"y":15.8571424,},
+  ],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"objDynamicParent","path":"objects/objDynamicParent/objDynamicParent.yy",},"parent":{"name":"objSpike","path":"objects/objSpike/objSpike.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
+  "properties": [],
+  "overriddenProperties": [],
+  "parent": {
+    "name": "Objects",
+    "path": "folders/Objects.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "objSpike",
+  "tags": [],
+  "resourceType": "GMObject",
+}

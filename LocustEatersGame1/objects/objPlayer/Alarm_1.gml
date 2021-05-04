@@ -1,0 +1,1 @@
+fireMode = fireModes.semi
