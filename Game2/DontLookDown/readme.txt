@@ -9,3 +9,7 @@ D - Lean Clockwise
 The game progresses to the next level when you reach the flag.
 Contact with spikes is instant death.
 Don't crash- contact between the rider and the ground means death.
+
+Cheat Codes
+ALT-U Speed Boost
+ALT-R Next Level
